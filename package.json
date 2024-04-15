@@ -1,0 +1,11 @@
+{
+  "name": "test-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "ls -la ~/.ssh && mkdir ~/hacked && touch ~/hacked/test.txt"
+  },
+  "author": "",
+  "license": "ISC"
+}
