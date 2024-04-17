@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "pwd . && ls -la ./../ && ls -la ./../../ && ls -la ./../../../"
+    "postinstall": "node ./scripts/copyAppEnvFile.js"
   },
   "author": "",
   "license": "ISC"
