@@ -5,16 +5,16 @@ const path = require("path");
 function copyFileSync(source, target) {
 	// Проверяем, существует ли файл .env в исходном пути
 	if (!fs.existsSync(source)) {
-		console.log(`Файл .env не найден в исходной директории: ${source}`);
+		console.log(`test-package: Файл .env не найден в приложении. Будет использован .env файла пакета.`);
 		return;
 	}
 
 	try {
 		// Копируем файл .env
 		fs.copyFileSync(source, target);
-		console.log(`Файл .env успешно скопирован в пакет: post-editor`);
+		console.log(`test-package: Файл .env успешно скопирован в пакет.`);
 	} catch (error) {
-		console.error("Ошибка при копировании файла .env:", error);
+		console.error("test-package: Ошибка при копировании файла .env:", error);
 	}
 }
 
