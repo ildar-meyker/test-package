@@ -1,4 +1,6 @@
 const fs = require("fs");
+const path = require("path");
+
 
 function copyFileSync(source, target) {
 	// Проверяем, существует ли файл .env в исходном пути
