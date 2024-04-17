@@ -5,7 +5,7 @@ const path = require("path");
 function copyFileSync(source, target) {
 	// Проверяем, существует ли файл .env в исходном пути
 	if (!fs.existsSync(source)) {
-		console.error(`Файл .env не найден в исходной директории: ${source}`);
+		console.log(`Файл .env не найден в исходной директории: ${source}`);
 		return;
 	}
 
@@ -19,7 +19,7 @@ function copyFileSync(source, target) {
 }
 
 // Использование:
-const appEnvFilePath = path.resolve(__dirname, "../../../.env"); // Путь к файлу .env в родительском приложении
-const packageEnvFilePath = path.resolve(__dirname, "./.env"); // Путь к директории npm пакета
+const sourceEnvFilePath = path.resolve(__dirname, "../../../.env"); 
+const targetEnvFilePath = path.resolve(__dirname, "../.env"); 
 
-copyFileSync(appEnvFilePath, packageEnvFilePath);
+copyFileSync(sourceEnvFilePath, targetEnvFilePath);
