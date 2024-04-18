@@ -34,7 +34,7 @@ function copyDirSync(source, target) {
 }
 
 // Использование:
-const sourceDirPath = path.resolve(dirname, "../build");
-const targetDirPath = path.resolve(dirname, `../../../views/${package.name}-build/static/`);
+const sourceDirPath = path.resolve(__dirname, "../build");
+const targetDirPath = path.resolve(__dirname, `../../../views/${package.name}-build/static/`);
 
 copyDirSync(sourceDirPath, targetDirPath);
