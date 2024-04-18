@@ -7,7 +7,7 @@ const package = require('../package.json');
 function copyDirSync(source, target) {
 	// Создаем целевую директорию, если она не существует
 	if (!fs.existsSync(target)) {
-		fs.mkdirSync(target);
+		fs.mkdirSync(target, { recursive: true });
 	}
 
 	// Получаем список файлов и поддиректорий в исходной директории
