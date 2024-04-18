@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./scripts/copyAppEnvFile.js && node ./scripts/copyBuildToApp.js"
+    "postinstall": "node ./scripts/copyAppEnvFile.js"
   },
   "author": "",
   "license": "ISC"
