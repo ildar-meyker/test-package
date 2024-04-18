@@ -1,25 +1,27 @@
 const fs = require("fs");
 const path = require("path");
 
+const package = require('../package.json');
+
 
 function copyFileSync(source, target) {
 	// Проверяем, существует ли файл .env в исходном пути
 	if (!fs.existsSync(source)) {
-		console.log(`test-package: Файл .env не найден в приложении. Будет использован .env файла пакета.`);
+		console.log(`${package.name}: Файл .env не найден в приложении. Будет использован .env файла пакета.`);
 		return;
 	}
 
 	try {
 		// Копируем файл .env
 		fs.copyFileSync(source, target);
-		console.log(`test-package: Файл .env успешно скопирован в пакет.`);
+		console.log(`${package.name}: Файл .env успешно скопирован в пакет.`);
 	} catch (error) {
-		console.error("test-package: Ошибка при копировании файла .env:", error);
+		console.error(`${package.name}: Ошибка при копировании файла .env:`, error);
 	}
 }
 
 // Использование:
-const sourceEnvFilePath = path.resolve(__dirname, "../../../.env"); 
-const targetEnvFilePath = path.resolve(__dirname, "../.env"); 
+const sourceFilePath = path.resolve(__dirname, "../../../.env"); 
+const targetFilePath = path.resolve(__dirname, "../.env"); 
 
-copyFileSync(sourceEnvFilePath, targetEnvFilePath);
+copyFileSync(sourceFilePath, targetFilePath);
