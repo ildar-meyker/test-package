@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const package = require('../package.json');
-
+const package = require("../package.json");
 
 function copyDirSync(source, target) {
 	// Создаем целевую директорию, если она не существует
@@ -34,7 +33,10 @@ function copyDirSync(source, target) {
 }
 
 // Использование:
-const sourceDirPath = path.resolve(__dirname, "../build");
-const targetDirPath = path.resolve(__dirname, `../../../views/${package.name}-build/static/`);
+const sourceDirPath = path.resolve(__dirname, "../build-view");
+const targetDirPath = path.resolve(
+	__dirname,
+	`../../../views/${package.name}-build/static/`
+);
 
 copyDirSync(sourceDirPath, targetDirPath);
