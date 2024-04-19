@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const package = require("./package.json");
 
 module.exports = {
 	mode: "production",
@@ -8,7 +9,10 @@ module.exports = {
 	entry: path.join(__dirname, "src", "index.js"),
 
 	output: {
-		path: path.resolve(__dirname, "build-view"),
+		path: path.resolve(
+			__dirname,
+			`../../../views/${package.name}-build/home/`
+		),
 	},
 
 	module: {
