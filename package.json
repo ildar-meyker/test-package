@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-view": "webpack --config webpack.config.js && node ./scripts/copyBuildToApp.js",
-    "postinstall": "npm install"
+    "build-view": "webpack --config webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
   "author": "",
   "license": "ISC",
