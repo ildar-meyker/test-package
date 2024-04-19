@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "build": "build-view"
-  },
   "scripts": {
     "build-view": "webpack --config webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
