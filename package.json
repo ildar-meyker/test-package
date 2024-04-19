@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "build-test-package": "./scripts/build.js" 
+  "scripts": {
+    "build-view": "webpack --config ./webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
   "author": "",
   "license": "ISC",
