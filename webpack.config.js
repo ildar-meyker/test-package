@@ -47,13 +47,11 @@ module.exports = {
 
 		new Dotenv({
 			systemvars: true,
-			path: "./.env",
 		}),
 	],
 
 	resolve: {
 		extensions: ["*", ".js", ".jsx"],
-		modules: ["./node_modules"],
 	},
 
 	optimization: {
