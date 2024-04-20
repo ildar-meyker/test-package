@@ -2,17 +2,40 @@
 
 const { exec } = require("child_process");
 
-exec(
-	"cd ./node_modules/test-package && npm install && npx webpack --config ./webpack.config.js && mkdir -p ../../views/test-package-build &&  cp -r ./build-view ../../views/test-package-build/home/",
-	(error, stdout, stderr) => {
+// Команды для выполнения
+const commands = [
+	"cd ./node_modules/test-package",
+	"npm install",
+	"npx webpack --config ./webpack.config.js",
+	"mkdir -p ../../views/test-package-build",
+	"cp -r ./build-view ../../views/test-package-build/home/",
+];
+
+// Функция для последовательного выполнения команд
+function executeCommands(index) {
+	if (index >= commands.length) {
+		console.log("Все команды выполнены успешно!");
+		return;
+	}
+
+	const command = commands[index];
+	console.log(`Выполнение команды: ${command}`);
+
+	exec(command, (error, stdout, stderr) => {
 		if (error) {
-			console.log(`error: ${error.message}`);
+			console.error(`Ошибка: ${error.message}`);
 			return;
 		}
 		if (stderr) {
-			console.log(`stderr: ${stderr}`);
+			console.error(`Ошибка вывода: ${stderr}`);
 			return;
 		}
-		console.log(`stdout: ${stdout}`);
-	}
-);
+		console.log(`Результат: ${stdout}`);
+
+		// Переход к следующей команде
+		executeCommands(index + 1);
+	});
+}
+
+// Начало выполнения команд
+executeCommands(0);
