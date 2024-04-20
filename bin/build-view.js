@@ -1,6 +1,7 @@
-// run webpack and create build
+#!/usr/bin/env node
 
 const config = require("../webpack.config.js");
+
 const webpack = require("webpack");
 
 const compiler = webpack(config);
