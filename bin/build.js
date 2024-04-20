@@ -3,6 +3,7 @@
 const { exec } = require("child_process");
 
 const command = `
+  cp ./.env ./node_modules/test-package/.env.copied
   cd ./node_modules/test-package &&
   npm install &&
   npx webpack --config ./webpack.config.js &&

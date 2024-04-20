@@ -47,7 +47,8 @@ module.exports = {
 
 		new Dotenv({
 			systemvars: true,
-			path: "../../.env",
+			path: "../../.env.copied",
+			defaults: true,
 		}),
 	],
 
