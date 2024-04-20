@@ -7,8 +7,7 @@
     "build-view": "webpack --config ./webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
   "bin": {
-    "test-package-build": "./bin/build-view.js",
-    "test-package-exec": "./bin/exec.js"
+    "test-package-build": "./bin/build.js"
   },
   "author": "",
   "license": "ISC",
