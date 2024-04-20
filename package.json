@@ -6,6 +6,7 @@
   "scripts": {
     "build-view": "webpack --config ./webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
+  "bin": "./bin/build-view.js",
   "author": "",
   "license": "ISC",
   "devDependencies": {
