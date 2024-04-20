@@ -12,12 +12,12 @@ const command = `
 
 exec(command, (error, stdout, stderr) => {
 	if (error) {
-		console.error(`Ошибка: ${error.message}`);
+		console.error(`error: ${error.message}`);
 		return;
 	}
 	if (stderr) {
-		console.error(`Ошибка вывода: ${stderr}`);
+		console.error(`stderr: ${stderr}`);
 		return;
 	}
-	console.log(`Результат: ${stdout}`);
+	console.log(`stdout: ${stdout}`);
 });
