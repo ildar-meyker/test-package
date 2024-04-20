@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-view": "webpack --config ./webpack.config.js && node ./scripts/copyBuildToApp.js"
   },
   "bin": {
     "test-package-build": "./bin/build.js"
