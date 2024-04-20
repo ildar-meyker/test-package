@@ -53,9 +53,7 @@ module.exports = {
 
 	resolve: {
 		extensions: ["*", ".js", ".jsx"],
-		resolve: {
-			modules: ["./node_modules"],
-		},
+		modules: ["./node_modules"],
 	},
 
 	optimization: {
